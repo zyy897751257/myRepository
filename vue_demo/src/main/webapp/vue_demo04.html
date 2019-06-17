@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue(v-on:mouseover)</title>
+</head>
+<script src="js/vue.js"></script>
+<style>
+    #div{
+        background-color: red;
+    }
+</style>
+<body>
+    <div id="app">
+        <div id="div" @mouseover="fun1" style="width: 700px;height: 20px">
+            <textarea @mouseover="fun2($event)">qwertyuiop</textarea>
+        </div>
+    </div>
+</body>
+<script>
+    new Vue({
+        el:"#app",
+        methods:{
+            fun1:function () {
+                alert("进入div区域...")
+            },
+            fun2:function (e) {
+                //e.stop();
+                alert("进入textarea区域...")
+                e.stopPropagation()
+            }
+        }
+    })
+</script>
+</html>

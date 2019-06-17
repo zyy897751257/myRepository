@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue(v-on:keydown)</title>
+</head>
+<script src="js/vue.js"></script>
+<body>
+    <div id="app">
+        <input type="text" @keydown="fun($event)"/>
+    </div>
+</body>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+
+        },
+        methods:{
+            fun:function (e) {
+                var keyCode = e.keyCode;
+                if (keyCode < 48 || keyCode > 57) {
+                    e.preventDefault()
+                }
+            }
+        }
+    })
+</script>
+</html>

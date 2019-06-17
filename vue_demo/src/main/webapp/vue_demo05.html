@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue(v-on:事件修饰符)</title>
+</head>
+<script src="js/vue.js"></script>
+<body>
+    <div id="app">
+        <form active="http://www.baidu.com" @submit.prevent>
+            <input type="submit" value="提交"/>
+        </form>
+        <div @click="fun1">
+            <a @click.stop href="http://www.baidu.com">跳转</a>
+        </div>
+    </div>
+</body>
+<script>
+    new Vue({
+        el:"#app",
+        methods:{
+            fun1:function () {
+                alert("hello")
+            }
+        }
+    })
+</script>
+</html>

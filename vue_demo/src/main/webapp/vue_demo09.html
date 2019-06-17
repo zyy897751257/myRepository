@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue(v-model)</title>
+</head>
+<script src="js/vue.js"></script>
+<body>
+    <div id="app">
+        <input type="text" v-model="user.username"/><br>
+        <input type="text" v-model="user.age"/>
+        <input type="button" @click="fun" value="点击"/>
+    </div>
+</body>
+<script>
+    var vue = new Vue({
+        el:"#app",
+        data:{
+            user:{
+                username:"张三",
+                age:"23"
+            }
+        },
+        methods:{
+            fun:function () {
+                alert(vue.user.username+"      "+vue.user.age)
+                vue.user.username="李四"
+                vue.user.age="55"
+            }
+        }
+    })
+</script>
+</html>

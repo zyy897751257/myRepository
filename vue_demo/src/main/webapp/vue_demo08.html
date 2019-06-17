@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue(v-bind)</title>
+</head>
+<script src="js/vue.js"></script>
+<body>
+<div id="app">
+    <font size="5" v-bind:color="ys1">黑马</font>
+    <font size="5" :color="ys2">传智播客</font>
+    <a v-bind={href:"http://www.itcast.cn/"+info}>点击</a>
+</div>
+</body>
+<script>
+    var vue = new Vue({
+        el:"#app",
+        data:{
+            ys1:"red",
+            ys2:"green",
+            info:"subject/javaeezly/index.shtml"
+        },
+        methods:{
+
+        }
+    })
+</script>
+</html>

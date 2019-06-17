@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue(v-if&v-show)</title>
+</head>
+<script src="js/vue.js"></script>
+<body>
+    <div id="app">
+        <span v-if="flag">123</span>
+        <span v-show="flag">456</span>
+        <button @click="toggle">toggle</button>
+    </div>
+</body>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            flag:false
+        },
+        methods:{
+            toggle:function () {
+                this.flag = !this.flag
+            }
+        }
+    })
+</script>
+</html>

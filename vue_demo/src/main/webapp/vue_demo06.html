@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue(v-on:按键修饰符)</title>
+</head>
+<script src="js/vue.js"></script>
+<body>
+    <div id="app">
+        <input type="text" @keydown.enter="fun"/>
+    </div>
+</body>
+<script>
+    var vue = new Vue({
+        el:"#app",
+        data:{
+            message:"hello"
+        },
+        methods:{
+            fun:function () {
+                alert(vue.message)
+            }
+        }
+    })
+</script>
+</html>

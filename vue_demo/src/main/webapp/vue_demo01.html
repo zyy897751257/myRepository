@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VUE入门</title>
+</head>
+<script src="js/vue.js"></script>
+<body>
+    <div id="app">
+        {{message}}<br>
+        {{message+100+100}}<br>
+        {{message>5?"大于5的数":"不大于5的数"}}
+    </div>
+</body>
+<script>
+    new Vue ({
+        el:"#app",
+        data:{
+            message:10
+        }
+    });
+</script>
+</html>
